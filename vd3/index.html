@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $.post(
+                "xuly.php", 
+                {ten:$("#name").val(), namsinh:$("#namsinh").val()}, 
+                function(data){
+                    // {"Ten":"Teo","NamSinh":"2000","Tuoi":19,"Mau":"red"} json, ajax data
+                    $("#kq").html( "Teo" );
+                    $("#kq").css("background-color", "yellow"); 
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    
+<input type="text" id="name" placeholder="Name" />
+<input type="text" id="namsinh" placeholder="Namsinh" />
+<button id="btn">Send</button>
+<div id="kq">...</div>
+
+
+<iframe width="250" height="180" src="https://www.youtube.com/embed/j8U06veqxdU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</body>
+</html>

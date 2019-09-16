@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+        $("#btn").click(function(){
+            $.post("xuly.php", {so1:5, so2:3}, function(data){
+                $("h2").html(data);
+            });
+        });
+
+    });
+    </script>
+</head>
+<body>
+
+<button id="btn">Click me</button>
+<h2>...</h2>
+
+<iframe width="250" height="180" src="https://www.youtube.com/embed/j8U06veqxdU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
